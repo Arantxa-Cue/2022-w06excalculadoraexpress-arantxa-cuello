@@ -8,8 +8,9 @@ const initializeserver = () => {
   new Promise((resolve, reject) => {
     const server = app.listen(port, () => {
       debug(`Server on ${port}`);
+      resolve();
     });
-    resolve();
+
     server.on("error", (error) => {
       debug("Error on server:", error.message);
       reject();
