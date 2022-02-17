@@ -2,9 +2,6 @@ require("dotenv").config();
 const initializeserver = require("./server");
 const port = process.env.SERVER_PORT || 5001;
 const debug = require("debug")("index");
-const express = require("express");
-
-const app = express();
 
 (async () => {
   try {
@@ -13,5 +10,3 @@ const app = express();
     debug(error);
   }
 })();
-
-app.use(initializeserver());
