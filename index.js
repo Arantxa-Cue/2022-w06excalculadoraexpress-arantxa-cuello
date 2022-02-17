@@ -13,3 +13,5 @@ const app = express();
     debug(error);
   }
 })();
+
+app.use(initializeserver());
